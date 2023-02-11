@@ -4,11 +4,11 @@
 
 ## 项目展示
 
-![](/public/pic1.png)
+![](public/pic1.png)
 
-![](/public/pic2.png)
+![](public/pic2.png)
 
-![](/public/pic3.png)
+![](public/pic3.png)
 
 ## API地址
 
