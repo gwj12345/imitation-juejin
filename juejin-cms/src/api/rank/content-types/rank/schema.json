@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "ranks",
+  "info": {
+    "singularName": "rank",
+    "pluralName": "ranks",
+    "displayName": "rank"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "authors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::author.author"
+    }
+  }
+}
