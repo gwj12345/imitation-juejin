@@ -1,24 +1,21 @@
-# juejin
+# juejin-vue
+> 仿掘金网站
 
-## Project setup
-```
+
+## 技术栈
+
++ 框架：vue+nuxt.js
++ 代码风格：Eslint
+
+## 项目运行
+```shell
+# 安装依赖
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+# 运行项目
 npm run serve
-```
 
-### Compiles and minifies for production
-```
+# 构建项目
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

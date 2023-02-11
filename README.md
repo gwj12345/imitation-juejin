@@ -14,19 +14,9 @@
 
 官方文档：[地址](https://bytedance.feishu.cn/docx/SyuZdfdtNoX8wcxAzhfc1mkUnFg)
 
-#### 2、项目运行
 
-```javascript
-# 安装依赖
-npm install
 
-# 运行项目
-npm run serve
 
-# 构建项目
-npm run build
-
-```
 
 
 
