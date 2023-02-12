@@ -13,7 +13,7 @@
 npm install
 
 # 运行项目
-npm run serve
+npm run dev
 
 # 构建项目
 npm run build

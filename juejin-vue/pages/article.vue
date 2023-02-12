@@ -13,6 +13,7 @@ export default {
     dosome(){
       api.getTopbar();
       api.getAllPaper();
+      api.getCategoriesBar();
     }
   },
   mounted() {
