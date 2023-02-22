@@ -12,7 +12,7 @@
           >
           
             <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 index-main">
-                article
+                <Item/>
             </div>
             <div class="col-md-4 col-lg-3 index-aside">
               <div class="aside-top rounded">
@@ -36,9 +36,10 @@ import SigninTip from "../components/signin-tip.vue";
 import Ad from "../components/ad.vue";
 import QrcodeDownload from '@/components/qrcode/qrcode-download.vue'
 import More from "../components/more.vue";
+import Item from "../components/homeitems/item.vue";
 export default {
   name: "Home",
-  components: { Header, SigninTip, Ad, QrcodeDownload, More },
+  components: { Header, SigninTip, Ad, QrcodeDownload, More,Item },
 };
 </script>
 

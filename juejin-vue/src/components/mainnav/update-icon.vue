@@ -1,6 +1,6 @@
 <template>
     <div class="update-icon">
-        <img src="../assets/images/update-icon.svg" alt="">
+        <img src="../../assets/images/update-icon.svg" alt="">
     </div>
 </template>
 
