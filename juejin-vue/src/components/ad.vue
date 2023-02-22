@@ -1,8 +1,12 @@
 <template>
-    <div class="banner">
+    <div class="banner" >
         <div  @click="openUrl(url1)" class="ctrl-box">
             <a :href="url" target="_blank"> 
-                <img src="../assets/images/1.jpg" alt="" class="img-fluid rounded"/>
+                <!-- <img src="../assets/images/1.jpg" alt="" class="img-fluid rounded"/> -->
+                <img v-bind:src="picurl" alt="" class="img-fluid rounded"/>
+                <!-- <p>大家好</p> -->
+                <!-- <span>{{msg}}</span> -->
+                <!-- <span>{{picurl}}</span> -->
             </a>
             <div  @click="openUrl(url1)" class="box">
                 <a class="label"
@@ -27,26 +31,31 @@
 </template>
 
 <script>
+// import api from "../api/index";
 export default{
-    methods:{
-            // function(){
-            //  let ctrlBox=document.getElementsByClassName("ctrl-box")[0]
-            //     let img= ctrlBox.getElementsByTagName("img")[0]
-            //     console.log(img)   
-            // }
-            // divHandle(){
-            //     console.log("1")
-            // },
-            openUrl(){
-                window.location.href=this.url1
-            },
-    },
+    
     data(){
+        var picurl = window.localStorage.getItem("picurl");
         return{
             url1:"https://bd.juejin.cn?utm_campaign=bd&amp;utm_source=web&amp;utm_medium=banner",
+            picurl:  picurl,
         }
         
-    }
+    },
+    methods:{
+        async getads(){ //promise 类型需要用async和await搭配接收
+            let ads = await api.getAds();
+            // console.log(ads)
+            let pic = api.link+ads['0']['attributes']['pics']['data']['attributes']['url']
+            // console.log(pic)
+            localStorage.setItem("picurl", pic);
+            // return pic;
+        }
+    },
+    mounted () {  
+        this.getads() 
+    } 
+    
 }
 </script>
 

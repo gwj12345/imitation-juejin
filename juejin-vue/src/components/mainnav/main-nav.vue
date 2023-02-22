@@ -11,12 +11,14 @@
         </a>
         <div class="nav col-sm-5 col-md-5">
            <div>
-          <ul class="nav-list header-nav">
-            <li v-for="item in Hpnames" :key="item.id"><Homepageitem  :name="item.name"/></li>
-            <li v-for="item in Itemnames" :key="item.id"><Navitems  :name="item.name"/></li>
-            <li v-for="item in Nbdnames" :key="item.id"><Noborder  :name="item.name"/></li>
+        <ul class="nav-list header-nav">
+            <!-- <li v-for="item in Hpnames" :key="item.id"><Homepageitem  :name="item.name"/></li> -->
+            <!-- <li v-for="item in Itemnames" :key="item.id"><Navitems  :name="item.name"/></li> -->
+            <li v-for="item in topbar" :key="item.id">{{item}}</li>
+            <!-- <li v-for="item in Nbdnames" :key="item.id"><Noborder  :name="item.name"/></li> -->
             <Clearborder/>
         </ul>
+        <!-- <span>{{topbar}}</span> -->
     </div>
         </div>
         <div class="col-sm-4 col-md-4 nav-input input-group ">
@@ -52,11 +54,15 @@
 import Homepageitem from "./homepage-item.vue"
 import Navitems from "./nav-items/nav-items.vue"
 import Clearborder from "./clear-border.vue"
+
+import api from "../../api/index";
 export default {
   name: "Mainnav",
   components: { Homepageitem, Navitems,Clearborder },
   data(){
+    var topbar = window.localStorage.getItem("topbar");
     return{
+        topbar : topbar,
         Hpnames:[
         {
             id:1,
@@ -100,7 +106,28 @@ export default {
     
     }
   },
-
+  methods:{
+    async gettopbar(){ //promise 类型需要用async和await搭配接收
+        let data = await api.getTopbar();
+        console.log(data)
+        let arr = []
+        for( var i in data){
+          // let zzz = {id:data[i]['id'], name:data[i]['attributes']['name'] }
+          // zzz["id"] = data[i]['id']
+          // arr.push(zzz);
+          arr.push(data[i]['attributes']['name'])
+        }
+        console.log(arr)
+        localStorage.setItem("topbar", arr);
+        // let pic = api.link+ads['0']['attributes']['pics']['data']['attributes']['url']
+        // console.log(pic)
+        // localStorage.setItem("picurl", pic);
+        // return pic;
+    }
+  },
+  mounted () {  
+    this.gettopbar() 
+  } 
 };
 </script>
 <style scoped>

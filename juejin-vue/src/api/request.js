@@ -7,7 +7,7 @@
 import axios from "axios";
 
 // 创建axios实例对象，添加全局配置
-const baseApi = 'http://win.gwj1314.cn:1337/api';
+const baseApi = '/api';
 const service = axios.create({
     baseURL: baseApi,
     timeout: 8000,
@@ -20,7 +20,7 @@ service.interceptors.request.use((req) => {
 
 // 响应拦截
 service.interceptors.response.use((res) => {
-    console.log(res.data.data);
+    // console.log(res.data.data);
     return res.data.data;
 });
 
