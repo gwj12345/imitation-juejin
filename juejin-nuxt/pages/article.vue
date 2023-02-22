@@ -1,25 +1,58 @@
 <template>
-  <div class="article">
-    <h1>这里是文章</h1>
+  <div>
+    <Layout></Layout>
+    <div>
+        <div
+            class="row index"
+            :style="{
+              position: 'relative',
+              display:flex,
+              height:'1000px',
+              overflow:hidden
+            }">
+                <div class="container-inside-leftBar col-md-1 col-lg-1">
+                    <ArticleLeftbar/>
+                </div>
+                <div class="article-content col-lg-8 col-md-7 col-sm-12 col-xs-12">
+                    <ArticleContent/>
+                </div>
+                <div class="col-md-2 col-lg-2">
+                    <div class="article-catalog">
+                        <Rightbar/>
+                    </div>
+                </div>
+            </div>
+
+    </div>
   </div>
 </template>
 <script>
-import api from "../api/index";
-export default {
-  data(){
-    return {};
-  },
-  methods: {
-    dosome(){
-      api.getTopbar();
-      api.getAllPaper();
-      api.getCategoriesBar();
-    }
-  },
-  mounted() {
-    this.dosome();
-  },
+    import Layout from "@/layouts/index.vue"
+    import ArticleContent from "@/components/articles/article-content.vue"
+    import ArticleLeftbar from "@/components/articles/article-leftbar.vue"
+    import Rightbar from "@/components/articles/rightbars/rightbar.vue"
+    export default {
+        name: "Article",
+        components: {Layout,ArticleContent,ArticleLeftbar,Rightbar  },
+};
+</script>
+
+<style>
+.container-inside{
+    position: relative;
+}
+.article-content{
+    height: 1000px;
+    margin: 10px;
+
+}
+.article-catalog{
+    margin:10px;
+    left: 20px;
+
+    max-width:100%;
 }
 
-</script>
+
+</style>
 

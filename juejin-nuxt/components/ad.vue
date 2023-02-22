@@ -57,7 +57,6 @@ export default{
 }
 .banner .img-fluid{
     margin-bottom: 10px;
-    width: 300px;
 }
 .banner .box .label span{
     vertical-align: top;
