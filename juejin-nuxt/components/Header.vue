@@ -20,5 +20,7 @@ export default {
 <style scoped>
 @import "../assets/css/main.css";
 @import "../assets/css/index.css";
+@import "../assets/css/bootstrap.css";
 @import "../assets/css/font-awesome-4.7.0/css/font-awesome.min.css";
+
 </style>

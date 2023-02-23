@@ -12,23 +12,29 @@
         <div class="nav col-sm-5 col-md-5">
            <div>
           <ul class="nav-list header-nav">
-            <li v-for="item in Hpnames" :key="item.id"><Homepageitem  :name="item.name"/></li>
-            <li v-for="item in Itemnames" :key="item.id"><Navitems  :name="item.name"/></li>
-            <li v-for="item in Nbdnames" :key="item.id"><Noborder  :name="item.name"/></li>
-            <Clearborder/>
+            <li><a href="/" class="text-primary">首页</a></li>
+            <li><a href="javascript:;">沸点</a></li>
+            <li><a href="javascript:;">课程</a></li>
+            <li><a href="javascript:;">直播</a></li>
+            <!-- <li><a href="javascript:;">资讯</a></li> -->
+            <li><a href="javascript:;">活动</a></li>
+            <!-- <li><a href="javascript:;">社区</a></li> -->
+            <li><a href="javascript:;">商城</a></li>
+            <li><a href="javascript:;">APP</a></li>
+            <li><a href="javascript:;">插件</a></li>
+            <li id="clear-border">
+              <a href="https://juejin.cn/vip?utm_source=web_nav" target="_blank"
+                ><img src="../../assets/images/zoom.png" alt="" width="120"
+              /></a>
+            </li>
         </ul>
     </div>
-        </div>
-        <div class="col-sm-4 col-md-4 nav-input input-group ">
+    </div>
+        <div class="col-sm-4 col-md-3 col-lg-3 nav-input input-group ">
             <input class="mt-4 search" type="text" placeholder="搜索" />
             <span class="input-group-text mt-4 "
             ><i class="fa fa-search fa-fw"></i
             ></span>
-            <button class="btn">创作者中心</button>
-            <Updateicon/>
-            <div class="btn">
-             <i class="fa fa-caret-down" aria-hidden="true"></i>
-            </div>
         </div> 
       </div>
     </div>
@@ -49,59 +55,59 @@
 </template>
 
 <script>
-import Homepageitem from "./homepage-item.vue"
-import Navitems from "./nav-items/nav-items.vue"
-import Clearborder from "./clear-border.vue"
-export default {
-  name: "Mainnav",
-  components: { Homepageitem, Navitems,Clearborder },
-  data(){
-    return{
-        Hpnames:[
-        {
-            id:1,
-            name:"首页"
-          },
-        ],
-        Itemnames:[
-        {
-            id:1,
-            name:"沸点"
-          },
-        {
-            id:2,
-            name:"课程"
-          },
-          {
-            id:3,
-            name:"直播"
-          },
-          {
-            id:4,
-            name:"活动"
-          },
-          {
-            id:5,
-            name:"竞赛"
-          },
-          {
-            id:6,
-            name:"商城"
-          },
-          {
-            id:7,
-            name:"App"
-          },
-          {
-            id:8,
-            name:"插件"
-          },
-        ],
+// import Homepageitem from "./homepage-item.vue"
+// import Navitems from "./nav-items/nav-items.vue"
+// import Clearborder from "./clear-border.vue"
+// export default {
+//   name: "Mainnav",
+//   components: { Homepageitem, Navitems,Clearborder },
+//   data(){
+//     return{
+//         Hpnames:[
+//         {
+//             id:1,
+//             name:"首页"
+//           },
+//         ],
+//         Itemnames:[
+//         {
+//             id:1,
+//             name:"沸点"
+//           },
+//         {
+//             id:2,
+//             name:"课程"
+//           },
+//           {
+//             id:3,
+//             name:"直播"
+//           },
+//           {
+//             id:4,
+//             name:"活动"
+//           },
+//           {
+//             id:5,
+//             name:"竞赛"
+//           },
+//           {
+//             id:6,
+//             name:"商城"
+//           },
+//           {
+//             id:7,
+//             name:"App"
+//           },
+//           {
+//             id:8,
+//             name:"插件"
+//           },
+//         ],
     
-    }
-  },
+//     }
+//   },
 
-};
+// };
 </script>
 <style scoped>
 @import "../../assets/css/main.css";
