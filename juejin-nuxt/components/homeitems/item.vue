@@ -28,6 +28,7 @@ export default {
 <style>
 .list {
   position: relative;
+  width:600px;
 }
 
 .list .item-name1 {
@@ -35,6 +36,7 @@ export default {
     padding-top: 10px;
     font-size: 13px;
     color: #8a929c;
+
 }
 
 .list .item-name2 {

@@ -64,9 +64,6 @@
     .update-icon{
         display: none;
     }
-    .article-catalog{
-        display: none;
-    }
 }
 
 @media (max-width: 960px) {
@@ -108,7 +105,7 @@
 .index-main{
     height: 1000px;
     margin: 10px;
-    background-color:white;
+    background-color: rgb(255, 255, 255);
 }
 
 .aside-top {
@@ -185,18 +182,4 @@
     .input-group{
         visibility: visible;
     }
-}
-@media (max-width: 970px){
-    
-    .attention{
-        display: none;
-    }
-
-}
-@media (max-width: 1070px){
-    
-    .article-catalog{
-        display: none;
-    }
-
 }

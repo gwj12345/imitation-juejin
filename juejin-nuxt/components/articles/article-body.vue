@@ -39,6 +39,7 @@ export default {
 </script>
 
 <style>
+@import "../../assets/css/index.css";
 .article {
   display: flex;
   justify-content: flex-start;
@@ -122,5 +123,7 @@ export default {
     background-color: #409eff;
     color:white;
 }
+
+
 </style>
 
