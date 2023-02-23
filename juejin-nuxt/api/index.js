@@ -5,8 +5,10 @@
  */
 
 import request from "./request";
-
+const link = 'http://win.gwj1314.cn:1337'
 export default {
+    // 返回baseurl
+    link,
     // 获取顶部tab类别
     getTopbar(){
         return request({
