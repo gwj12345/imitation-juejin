@@ -17,7 +17,6 @@
     "vue": "^2.7.10",
     "vue-loader": "^15.10.1",
     "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10",
-    "vue-underscore": "^0.1.4"
+    "vue-template-compiler": "^2.7.10"
   }
 }

@@ -6,9 +6,7 @@
 body {
     background-color: #e4e6eb !important;
 }
-a{
-    text-decoration: none;
-}
+
 Header {
     background-color: #fff !important;
 }
@@ -19,7 +17,6 @@ img {
 
 li {
     list-style: none;
-    display: inline-block;
 }
 
 a:hover {
@@ -68,9 +65,7 @@ header {
     height: 3rem;
     line-height: 3rem;
 }
-.gd a{
-    text-decoration: none;
-}
+
 .container .nav-list li {
     margin: 0;
 }
@@ -123,7 +118,7 @@ header {
 }
 
 .search {
-    width:150px;
+    width: 240px;
     transition: all 0.5s ease 0s;
 
     display: block;
