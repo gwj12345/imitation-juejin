@@ -3,114 +3,118 @@
     <div class="w">
       <div class="row">
         <a href="/" class="logo col-sm-2 col-md-2">
-          <img
-            src="../../assets/images/logo.svg"
-            alt="稀土掘金"
-            class="img-fluid"
-          />
+          <img :src="bindIcon(imglogo)" class="img-fluid"/>
         </a>
         <div class="nav col-sm-5 col-md-5">
            <div>
           <ul class="nav-list header-nav">
-            <li><a href="/" class="text-primary">首页</a></li>
-            <li><a href="javascript:;">沸点</a></li>
-            <li><a href="javascript:;">课程</a></li>
-            <li><a href="javascript:;">直播</a></li>
-            <!-- <li><a href="javascript:;">资讯</a></li> -->
-            <li><a href="javascript:;">活动</a></li>
-            <!-- <li><a href="javascript:;">社区</a></li> -->
-            <li><a href="javascript:;">商城</a></li>
-            <li><a href="javascript:;">APP</a></li>
-            <li><a href="javascript:;">插件</a></li>
-            <li id="clear-border">
-              <a href="https://juejin.cn/vip?utm_source=web_nav" target="_blank"
-                ><img src="../../assets/images/zoom.png" alt="" width="120"
-              /></a>
-            </li>
+            <li v-for="item in Hpnames" :key="item.id"><Homepageitem  :name="item.name"/></li>
+            <li v-for="item in Itemnames" :key="item.id"><Navitems  :name="item.name"/></li>
+            <li v-for="item in Nbdnames" :key="item.id"><Noborder  :name="item.name"/></li>
+            <Clearborder/>
         </ul>
     </div>
-    </div>
-        <div class="col-sm-4 col-md-3 col-lg-3 nav-input input-group ">
+        </div>
+        <div class="col-sm-4 col-md-4 nav-input input-group ">
             <input class="mt-4 search" type="text" placeholder="搜索" />
             <span class="input-group-text mt-4 "
             ><i class="fa fa-search fa-fw"></i
             ></span>
+            <button class="btn">创作者中心</button>
+            <Updateicon/>
+            <div class="btn">
+             <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
         </div> 
       </div>
     </div>
     <!-- 头像通知 -->
     <div class="homepage">
-      <span
-        ><a href="https://juejin.cn/notification"
-          ><i class="fa fa-bell" aria-hidden="true"></i></a
-      ></span>
-      <span
-        ><a href="https://juejin.cn/user/3602460700059213"
-          ><img
-            src="https://pic.imgdb.cn/item/63eb263ef144a01007104f0c.png"
-            alt="" /></a
-      ></span>
+      <span class="bell">
+        <a href="https://juejin.cn/notification">
+          <i class="fa fa-bell" aria-hidden="true">
+          </i>
+        </a>
+      </span>
+      <span>
+        <a href="https://juejin.cn/user/3602460700059213">
+          <img src="https://pic.imgdb.cn/item/63eb263ef144a01007104f0c.png" alt="" />
+        </a>
+      </span>
+      <span>
+        <Theme @changeLogo="changeLogo"/>
+      </span>
     </div>
     </div>
 </template>
 
 <script>
-// import Homepageitem from "./homepage-item.vue"
-// import Navitems from "./nav-items/nav-items.vue"
-// import Clearborder from "./clear-border.vue"
-// export default {
-//   name: "Mainnav",
-//   components: { Homepageitem, Navitems,Clearborder },
-//   data(){
-//     return{
-//         Hpnames:[
-//         {
-//             id:1,
-//             name:"首页"
-//           },
-//         ],
-//         Itemnames:[
-//         {
-//             id:1,
-//             name:"沸点"
-//           },
-//         {
-//             id:2,
-//             name:"课程"
-//           },
-//           {
-//             id:3,
-//             name:"直播"
-//           },
-//           {
-//             id:4,
-//             name:"活动"
-//           },
-//           {
-//             id:5,
-//             name:"竞赛"
-//           },
-//           {
-//             id:6,
-//             name:"商城"
-//           },
-//           {
-//             id:7,
-//             name:"App"
-//           },
-//           {
-//             id:8,
-//             name:"插件"
-//           },
-//         ],
-    
-//     }
-//   },
+import Homepageitem from "./homepage-item.vue"
+import Navitems from "./nav-items/nav-items.vue"
+import Clearborder from "./clear-border.vue"
+import Theme from "./themes/theme.vue"
+export default {
+  name: "Mainnav",
+  components: { Homepageitem, Navitems,Clearborder,Theme  },
+  data(){
+    return{
+        Hpnames:[
+        {
+            id:1,
+            name:"首页"
+          },
+        ],
+        Itemnames:[
+        {
+            id:1,
+            name:"沸点"
+          },
+        {
+            id:2,
+            name:"课程"
+          },
+          {
+            id:3,
+            name:"直播"
+          },
+          {
+            id:4,
+            name:"活动"
+          },
+          {
+            id:5,
+            name:"竞赛"
+          },
+          {
+            id:6,
+            name:"商城"
+          },
+          {
+            id:7,
+            name:"App"
+          },
+          {
+            id:8,
+            name:"插件"
+          },
+        ],
+        imglogo:["logo.svg"],
+    }
+  },
+  methods:{
+    bindIcon(icon){
+        return require("@/assets/images/"+icon);
+    },
+    changeLogo(value){
+      this.imglogo= value
+    }
+  }
 
-// };
+};
 </script>
 <style scoped>
 @import "../../assets/css/main.css";
 @import "../../assets/css/index.css";
+@import "../../assets/css/bootstrap.css";
 @import "../../assets/css/font-awesome-4.7.0/css/font-awesome.min.css";
 </style>

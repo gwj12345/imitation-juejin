@@ -1,8 +1,8 @@
 <template>
   <div>
     <Layout></Layout>
-    <div>
-        <div
+    <div class="content_box">
+            <div
             class="row index"
             :style="{
               position: 'relative',
@@ -22,7 +22,6 @@
                     </div>
                 </div>
             </div>
-
     </div>
   </div>
 </template>
