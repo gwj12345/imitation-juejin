@@ -2,14 +2,10 @@
     margin: 0;
     padding: 0;
 }
-
 body {
-    background-color: #e4e6eb !important;
+    background-color: var(--backgroundColor)
 }
 
-Header {
-    background-color: #fff !important;
-}
 
 img {
     border-style: none;
@@ -25,8 +21,7 @@ a:hover {
 
 header {
     position: relative;
-    background: var(--juejin-navigation);
-    border-bottom: 1px solid #f1f1f1;
+    background-color: var(--headerColor);
     color: #909090;
 }
 
@@ -53,7 +48,7 @@ header {
 }
 
 .nav-list>li>a {
-    color: #515767;
+    color:var(--fontColor);
     text-decoration: none;
 }
 
@@ -84,7 +79,8 @@ header {
 }
 
 .border_top {
-    border-top: 1px solid #f1f1f1;
+    border-top: 1px solid;
+    border-color: var(----borderColor);
 }
 
 .container {
@@ -228,4 +224,7 @@ header {
     padding: 0;
 }
 
+.index-main{
+    background-color: var(--itemColor);
+}
 

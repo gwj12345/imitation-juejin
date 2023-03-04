@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header />
+    <Header/>
     <div class="content_box">
-        
+      <div class="container">
           <div
             class="row index mt-1"
             :style="{
@@ -11,10 +11,10 @@
             }"
           >
           
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 index-main">
+            <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 index-main">
                 <Item/>
             </div>
-            <div class="col-lg-2 col-md-2 col-lg-3 index-aside">
+            <div class=" col-md-4 col-lg-3 index-aside">
               <div class="aside-top rounded">
                 <SigninTip/>
               </div>
@@ -26,7 +26,8 @@
             </div>
           </div>
         </div>
-    </div>
+      </div>
+  </div>
   
 </template>
 
@@ -46,5 +47,6 @@ export default {
 <style scoped>
 @import "../assets/css/main.css";
 @import "../assets/css/index.css";
+@import "../assets/css/bootstrap.css";
 @import "../assets/css/font-awesome-4.7.0/css/font-awesome.min.css";
 </style>

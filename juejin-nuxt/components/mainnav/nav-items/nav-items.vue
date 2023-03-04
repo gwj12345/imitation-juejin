@@ -16,7 +16,7 @@ export default{
 </script>
 <style>
 .items>li>a{
-    color: #515767;
+    color: var(--fontColor);
     text-decoration: none;
 }
 </style>

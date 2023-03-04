@@ -27,10 +27,6 @@
         display: none;
     }
 
-    .homepage {
-        right: -80px;
-    }
-
     .nav-list-bottom .nav-list>li:first-child {
         margin-left: 5px;
     }
@@ -105,7 +101,6 @@
 .index-main{
     height: 1000px;
     margin: 10px;
-    background-color: rgb(255, 255, 255);
 }
 
 .aside-top {
@@ -139,7 +134,14 @@
     cursor: pointer;
 }
 
-
+@media (max-width: 450px){
+.search{
+    display: none;
+}
+.input-group-text{
+    display: none;
+}
+}
 @media (min-width: 768px){
     
     .input-group{
