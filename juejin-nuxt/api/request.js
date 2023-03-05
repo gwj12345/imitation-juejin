@@ -7,7 +7,7 @@
 import axios from "axios";
 
 // 创建axios实例对象，添加全局配置
-const baseApi = '/api';
+const baseApi = 'http://win.gwj1314.cn:1337/api';
 const service = axios.create({
     baseURL: baseApi,
     timeout: 8000,
