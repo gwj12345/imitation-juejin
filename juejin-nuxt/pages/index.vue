@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header/>
+    <Header />
     <div class="content_box">
       <div class="container">
           <div
@@ -33,11 +33,11 @@
 
 <script>
 import Header from "../components/Header.vue";
-import SigninTip from "../components/signin-tip.vue";
-import Ad from "../components/ad.vue";
-import QrcodeDownload from '@/components/qrcode/qrcode-download.vue'
-import More from "../components/more.vue";
-import Item from "../components/homeitems/item.vue";
+import SigninTip from "../components/SigninTip.vue";
+import Ad from "../components/Ad.vue";
+import QrcodeDownload from '@/components/qrcode/QrcodeDownload.vue'
+import More from "../components/More.vue";
+import Item from "../components/homeitems/MyItem.vue";
 export default {
   name: "Home",
   components: { Header, SigninTip, Ad, QrcodeDownload, More,Item },

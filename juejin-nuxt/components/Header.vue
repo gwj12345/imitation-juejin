@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import Mainnav from "./mainnav/main-nav.vue";
-import Navlist from "./navlist/nav-list.vue";
-import Updateicon from "./mainnav/update-icon.vue";
+import Mainnav from "./mainnav/MainNav.vue";
+import Navlist from "./navlist/NavList.vue";
+import Updateicon from "./mainnav/UpdateIcon.vue";
 export default {
   name: "Header",
   components: {Mainnav,Navlist,Updateicon},

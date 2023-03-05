@@ -6,7 +6,7 @@
 </template>
 <script>
 
-import Mainnav from '@/components/mainnav/main-nav.vue'
+import Mainnav from '@/components/mainnav/MainNav.vue'
 export default{
     name: "Home",
     components: {

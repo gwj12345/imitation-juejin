@@ -5,7 +5,9 @@
 body {
     background-color: var(--backgroundColor)
 }
-
+.content_box{
+    background-color: var(--backgroundColor)
+}
 
 img {
     border-style: none;
