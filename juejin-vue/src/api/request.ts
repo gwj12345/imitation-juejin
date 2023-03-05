@@ -4,7 +4,7 @@
  * @author gwj
  */
 
-import axios from "axios";
+ import axios, { AxiosInstance, AxiosRequestConfig, AxiosPromise,AxiosResponse } from 'axios'; 
 
 // 创建axios实例对象，添加全局配置
 const baseApi = '/api';
@@ -25,7 +25,7 @@ service.interceptors.response.use((res) => {
 });
 
 // 请求函数
-function request(options) {
+function request(options: AxiosRequestConfig<any>) {
     options.method = options.method || "get";
     if (options.method.toLowerCase() === "get") {
         options.params = options.data;
@@ -34,10 +34,9 @@ function request(options) {
 }
 
 ["get", "post", "put", "delete", "patch"].forEach((item) => {
-    request[item] = (url, data) => {
+    request[item] = (url: string) => {
         return request({
             url,
-            data,
             method: item,
         });
     };
