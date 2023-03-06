@@ -7,13 +7,12 @@
 
 + 语言：JavaScript
 + 框架:  Vue.js，Nuxt.js
-+ UI风格：ELement-ui（暂定）
-+ 构建：Webpack/vite（暂定）
++ UI风格：Bootstrap
 + 包管理：npm
 + 接口请求： Axios
-+ 状态管理：Vuex（暂定）
-+ 测试工具：Jest/Jasmine（暂定）
-+ 代码风格：Eslint（暂定）
++ 状态管理：Vuex
++ 测试工具：Jasmine
++ 提交规范：commitlint，husky
 
 ## 项目运行
 ```shell
