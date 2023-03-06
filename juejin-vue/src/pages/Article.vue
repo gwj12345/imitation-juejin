@@ -28,9 +28,9 @@
 </template>
 <script>
     import Layout from "@/layouts/index.vue"
-    import ArticleContent from "@/components/articles/article-content.vue"
-    import ArticleLeftbar from "@/components/articles/article-leftbar.vue"
-    import Rightbar from "@/components/articles/rightbars/rightbar.vue"
+    import ArticleContent from "@/components/articles/ArticleContent.vue"
+    import ArticleLeftbar from "@/components/articles/ArticleLeftbar.vue"
+    import Rightbar from "@/components/articles/rightbars/RightBar.vue"
     export default {
         name: "Article",
         components: {Layout,ArticleContent,ArticleLeftbar,Rightbar  },

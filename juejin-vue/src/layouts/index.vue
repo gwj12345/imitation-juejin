@@ -10,7 +10,7 @@
   </div>
 </template>
 <script setup>
-import Mainnav from '@/components/mainnav/main-nav.vue'
+import Mainnav from '@/components/mainnav/MainNav.vue'
 </script>
 
 <style></style>

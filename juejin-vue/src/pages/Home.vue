@@ -32,19 +32,26 @@
 
 <script>
 import Header from "../components/Header.vue";
-import SigninTip from "../components/signin-tip.vue";
-import Ad from "../components/ad.vue";
-import QrcodeDownload from '@/components/qrcode/qrcode-download.vue'
-import More from "../components/more.vue";
-import Item from "../components/homeitems/item.vue";
+import SigninTip from "../components/SigninTip.vue";
+import Ad from "../components/Ad.vue";
+import QrcodeDownload from '@/components/qrcode/QrcodeDownload.vue'
+import More from "../components/More.vue";
+import Item from "../components/homeitems/MyItem.vue";
+// import defaultTheme from '../assets/css/themes/default.css'
+// import darkTheme from '../assets/css/themes/dark.css'
+
 export default {
   name: "Home",
   components: { Header, SigninTip, Ad, QrcodeDownload, More,Item },
+
 };
+
 </script>
 
 <style scoped>
 @import "../assets/css/main.css";
 @import "../assets/css/index.css";
 @import "../assets/css/font-awesome-4.7.0/css/font-awesome.min.css";
+
+
 </style>
