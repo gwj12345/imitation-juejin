@@ -33,6 +33,22 @@
     export default {
         name: "Article",
         components: {Layout,ArticleContent,ArticleLeftbar,Rightbar  },
+        head() {
+        return {
+            title:  '最近很多人都在说 “前端已死”，讲讲我的看法',
+            meta: [{
+                    hid: 'description',
+                    name: 'description',
+                    content: '最近很多人都在说 “前端已死”，讲讲我的看法'
+                },
+                {
+                    hid: 'keywords',
+                    name: 'keywords',
+                    content: '掘金,稀土,前端'
+                },
+            ]
+        }
+    },
 };
 </script>
 

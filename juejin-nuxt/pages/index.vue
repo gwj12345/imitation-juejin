@@ -41,8 +41,25 @@ import Item from "../components/homeitems/MyItem.vue";
 export default {
   name: "Home",
   components: { Header, SigninTip, Ad, QrcodeDownload, More,Item },
+  head() {
+      return {
+          title:  '稀土掘金',
+          meta: [{
+                  hid: 'description',
+                  name: 'description',
+                  content: '掘金是面向全球中文开发者的技术内容分享与交流平台。我们通过技术文章、沸点、课程、直播等产品和服务，打造一个激发开发者创作灵感，激励开发者沉淀分享，陪伴开发者成长的综合类技术社区。'
+              },
+              {
+                  hid: 'keywords',
+                  name: 'keywords',
+                  content: '掘金,稀土,Vue.js,前端面试题,Kotlin,ReactNative,Python'
+              },
+          ]
+      }
+  },
 };
 </script>
+
 
 <style scoped>
 @import "../assets/css/main.css";

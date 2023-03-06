@@ -12,10 +12,9 @@
       <div class="item-content">  
       </div>
     </div>
-    <img
-      class="picture"
-      src="@/assets/images/3.jpg"
-    />
+    <a href="http://localhost:3000/article">
+      <img class="picture" src="@/assets/images/3.jpg" />
+    </a>
   </div>
 </template>
 
